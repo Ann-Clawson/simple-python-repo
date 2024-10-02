@@ -1,0 +1,20 @@
+name: "PR to Develop"
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types: [opened, sunchronized, reopened]
+
+jobs:
+  lint-commits:
+    runs-on: ubuntu-latest
+    name: Lint Commit Messages
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run commitlint reusable action
+        uses: Ann-Clawson/github-actions-reusable-workflows/.github/actions/commitlint-python@main
+        with:
+          branch: develop
