@@ -4,7 +4,7 @@ on:
   pull_request:
     branches:
       - develop
-    types: [opened, synchronized, reopened]
+    types: [opened, sunchronized, reopened]
 
 jobs:
   lint-commits:
