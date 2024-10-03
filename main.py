@@ -1,2 +1,2 @@
-print("Howdy, GitHub Actions! Derp")
+print("Howdy, GitHub Actions!")
 
